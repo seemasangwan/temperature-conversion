@@ -25,16 +25,22 @@ submit.addEventListener('click',(e)=>
     let res;
     if(temp=="celsius")
     {
-res=tocelsius(val);
+res=tofahrenheit(val);
+const result= document.getElementsByClassName('res')[0];
+if(isNaN(val)==true)
+result.innerHTML='Please Enter Valid Number';
+else
+result.innerHTML=`= ${res} fahrenheit`;
     }
     if(temp=="Fahrenheit")
     {
-res=tofahrenheit(val);
-    }
-   const result= document.getElementsByClassName('res')[0];
-   if(isNaN(val)==true)
-   result.innerHTML='Please Enter Valid Number';
+res=tocelsius(val);
+const result= document.getElementsByClassName('res')[0];
+if(isNaN(val)==true)
+result.innerHTML='Please Enter Valid Number';
 else
-   result.innerHTML=`= ${res} ${temp}`;
+result.innerHTML=`= ${res} celsius`;
+    }
+  
 
 })
