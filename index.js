@@ -8,7 +8,7 @@ const tofahrenheit=(x)=>
 }
 const tocelsius=(x)=>
 {
-  return (32*x-32)*(5/9);
+  return (x-32)*(5/9);
 }
 const submit=document.getElementById('submit');
 submit.addEventListener('click',(e)=>
